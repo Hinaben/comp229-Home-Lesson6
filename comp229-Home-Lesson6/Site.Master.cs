@@ -30,12 +30,7 @@ namespace comp229_Home_Lesson6
                 case "Departments":
                     departments.Attributes.Add("class", "active");
                     break;
-                case "Enrollments":
-                    enrollments.Attributes.Add("class", "active");
-                    break;
-                case "About":
-                    about.Attributes.Add("class", "active");
-                    break;
+  
                 case "Contact":
                     contact.Attributes.Add("class", "active");
                     break;

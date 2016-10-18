@@ -12,6 +12,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -33,15 +34,25 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li id="home" runat="server"><a href="Default.aspx"><i class="fa fa-home fa-lg"></i>  Home</a></li>
-                        <li id="students" runat="server"><a href="Students.aspx"><i class="fa fa-paper-plane-o fa-lg"></i>  Student</a></li>
-                        <li id="departments" runat="server"><a href="Department.aspx"><i class="fa fa-puzzle-plane-o fa-lg"></i>  Department</a></li>
-                        <li id="enrollments" runat="server"><a href="Enrollment.aspx"><i class="fa fa-map-o fa-lg"></i>  Enrollment</a></li>
-                        <li id="courses" runat="server"><a href="Course.aspx"><i class="fa fa-book fa-lg"></i>  Course</a></li>
-                        <li id="about" runat="server"><a href="About.aspx"><i class="fa fa-info fa-lg"></i>  About</a></li>
-                        <li id="contact" runat="server"><a href="Contact.aspx"><i class="fa fa-phone fa-lg"></i>  Contact</a></li>
-                    </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                <li id="home" runat="server"><a href="/Default.aspx"><i class="fa fa-home fa-lg"></i> Home</a></li>
+
+                <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
+                    <li id="login" runat="server"><a href="/Login.aspx"><i class="fa fa-sign-in fa-lg"></i> Login</a></li>
+                    <li id="register" runat="server"><a href="/Register.aspx"><i class="fa fa-user-plus fa-lg"></i> Register</a></li>
+                </asp:PlaceHolder>
+
+              
+                <asp:PlaceHolder ID="ContosoPlaceHolder" runat="server">
+                    <li id="menu" runat="server"><a href="/Contoso/MainMenu.aspx"><i class="fa fa-map-signs fa-lg"></i> Main Menu</a></li>
+                    <li id="students" runat="server"><a href="/Contoso/Students.aspx"><i class="fa fa-leanpub fa-lg"></i> Students</a></li>
+                    <li id="courses" runat="server"><a href="/Contoso/Courses.aspx"><i class="fa fa-book fa-lg"></i> Courses</a></li>
+                    <li id="departments" runat="server"><a href="/Contoso/Departments.aspx"><i class="fa fa-puzzle-piece fa-lg"></i> Departments</a></li>
+                    <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+                </asp:PlaceHolder>
+
+                <li id="contact" runat="server"><a href="/Contact.aspx"><i class="fa fa-phone fa-lg"></i> Contact</a></li>
+            </ul>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
@@ -62,8 +73,8 @@
     </nav>
 
     <!-- Scripts Section -->
-    <script src="Scripts/jquery-2.2.4.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/app.js"></script>
+    <script src="/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/app.js"></script>
 </body>
 </html>
